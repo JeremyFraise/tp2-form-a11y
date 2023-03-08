@@ -24,18 +24,21 @@
 
 }
 
-/* .root {
+.root {
 
 
 
-} */
-
-
-
-li {
-    list-style: none;
 }
 
+header{
+
+    display: flex;
+    justify-content: space-around;
+
+}
+header p{
+    align-self: flex-end;
+}
 
 /* Les trois prochaines lignes ont été grandement inspirées du forum au https://stackoverflow.com/questions/17541614/use-images-instead-of-radio-buttons */
 /* 1 - Cache les boutons radios */
@@ -53,7 +56,7 @@ li {
   
 /* 3 - Style au checked */
 [type=radio]:checked + figure img {
-    outline: 2px solid #f00;
+    outline: 10px solid #9B0;
 }
 
 .form-section {
