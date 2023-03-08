@@ -33,7 +33,8 @@
 
                 <div>
                     <label for="jour-arrivee">Date d'arrivée:</label>
-                    <select id="jour-arrivee" name="jour-arrivee" required>
+                    <select id="jour-arrivee" name="jour-arrivee" 
+                    aria-label="jour d'arrivée" required>
                         <option value="0"></option>
                         <option value="1">1</option>
                         <option value="2">2</option>
@@ -69,7 +70,8 @@
                     </select>
 
                     <label for="mois-arrivee"></label>
-                    <select id="mois-arrivee" name="mois-arrivee" required>
+                    <select id="mois-arrivee" name="mois-arrivee" 
+                    aria-label="Mois d'arrivée" required>
                         <option value="0"></option>
                         <option value="1">1</option>
                         <option value="2">2</option>
@@ -86,16 +88,19 @@
                     </select>
 
                     <label for="annee-arrivee"></label>
-                    <select id="annee-arrivee" name="annee-arrivee" required>
-                        <option value="0">2023</option>
-                        <option value="0">2024</option>
+                    <select id="annee-arrivee" name="annee-arrivee" 
+                    aria-label="Année d'arrivée" required>
+                        <option value="0"></option>
+                        <option value="1">2023</option>
+                        <option value="2">2024</option>
                     </select>
                 
                 </div>
 
                 <div>
                     <label for="jour-depart">Date de départ:</label>
-                    <select id="jour-depart" name="jour-depart" required>
+                    <select id="jour-depart" name="jour-depart" 
+                    aria-label="jour de départ" required>
                         <option value="0"></option>
                         <option value="1">1</option>
                         <option value="2">2</option>
@@ -131,7 +136,8 @@
                     </select>
 
                     <label for="mois-depart"></label>
-                    <select id="mois-depart" name="mois-depart" required>
+                    <select id="mois-depart" name="mois-depart"
+                    aria-label="Mois de départ" required>
                         <option value="0"></option>
                         <option value="1">1</option>
                         <option value="2">2</option>
@@ -148,9 +154,11 @@
                     </select>
 
                     <label for="annee-depart"></label>
-                    <select id="annee-depart" name="annee-depart" required>
-                        <option value="0">2023</option>
-                        <option value="0">2024</option>
+                    <select id="annee-depart" name="annee-depart"
+                    aria-label="Année de départ" required>
+                        <option value="0"></option>
+                        <option value="1">2023</option>
+                        <option value="2">2024</option>
                     </select>
                 
                 </div>
@@ -215,16 +223,17 @@
                             <label for="chambreSimple" class="liste__label">
                                 <input type="radio" id="chambreSimple" name="choixChambre" value="small" checked required>
                                 <figure class="figure">
-                                    <img class="liste__item--img" src="../images/types-de-chambre/1-lit-double.webp" alt="Option chambre simple">
+                                    <img class="liste__item--img" src="../images/types-de-chambre/imageOptimisees/1-lit-double_255w.jpg" alt="Option chambre simple">
                                     <figcaption class="liste__item--figcaption">Chambre simple</figcaption>
                                 </figure>
                             </label>
+                            
                          </li>
                         <li> 
                             <label for="chambreDouble" class="liste__label" value="small" checked>
                                 <input id="chambreDouble" type="radio" name="choixChambre">
                                 <figure class="figure">
-                                    <img class="liste__item--img" src="../images/types-de-chambre/2-lits-double.jpg" alt="Option chambre double">
+                                    <img class="liste__item--img" src="../images/types-de-chambre/imageOptimisees/2-lits-double_255w.jpg" alt="Option chambre double">
                                     <figcaption class="liste__item--figcaption">Chambre double</figcaption>
                                 </figure>
                             </label>
@@ -233,7 +242,7 @@
                             <label for="chambreFamiliale" class="liste__label" value="small" checked>
                                 <input id="chambreFamiliale" type="radio" name="choixChambre" >
                                 <figure class="figure">
-                                    <img class="liste__item--img" src="../images/types-de-chambre/chambre-familiale.jpg" alt="Option chambre familiale">
+                                    <img class="liste__item--img" src="../images/types-de-chambre/imageOptimisees/3-chambre-familiale_255w.jpg" alt="Option chambre familiale">
                                     <figcaption class="liste__item--figcaption">Chambre familiale</figcaption>
                                 </figure>
                             </label>
@@ -269,7 +278,7 @@
                 </div>
                 <div class="div__form-section">
                     <label for="tele">Téléphone :</label>
-                    <input id="telephone" name="telephone" required>
+                    <input id="telephone" name="telephone" pattern="" title="" required>
                 </div>
                 
             </fieldset>

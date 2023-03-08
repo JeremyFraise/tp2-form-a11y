@@ -1,29 +1,44 @@
-.root {
+/* Normalize
+   ========================================================================== */
+   @import url(normalize.css);
 
-}
+   /* Utilitaires
+      ========================================================================== */
+   @import url(utilitaires.css);
+   
+   /* Charte typographique
+      ========================================================================== */
+   @import url(typo.css);
+   
+   /* Grille 
+      ========================================================================== */
+   @import url(grille.css);
+
+
 
 * {
 
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+
 }
 
-.form-section {
-    
-}
+/* .root {
 
-.liste {
-    display: flex;
-    flex-direction: row;
-}
 
-.liste img {
-    width:
-}
+
+} */
+
+
 
 li {
     list-style: none;
 }
 
-/* HIDE RADIO */
+
+/* Les trois prochaines lignes ont été grandement inspirées du forum au https://stackoverflow.com/questions/17541614/use-images-instead-of-radio-buttons */
+/* 1 - Cache les boutons radios */
 [type=radio] { 
     position: absolute;
     opacity: 0;
@@ -31,12 +46,42 @@ li {
     height: 0;
 }
   
-/* IMAGE STYLES */
-[type=radio] + img {
+/* 2 - Style du curseur au survol */
+[type=radio] + figure img {
     cursor: pointer;
 }
   
-/* CHECKED STYLES */
-[type=radio]:checked + img {
+/* 3 - Style au checked */
+[type=radio]:checked + figure img {
     outline: 2px solid #f00;
+}
+
+.form-section {
+    
+    margin: 0 3em 0 3em;
+
+}
+
+.liste {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    align-items: center;
+}
+@media(min-width: 600px) {
+    .liste{
+        flex-direction: row;
+        justify-content: space-around;
+    }
+}
+.figure {
+
+    padding: 1.5rem;;
+
+}
+
+.liste__item--figcaption {
+
+    text-align:center;
+
 }
