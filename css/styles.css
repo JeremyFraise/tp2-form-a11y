@@ -56,12 +56,15 @@ header p{
   
 /* 3 - Style au checked */
 [type=radio]:checked + figure img {
-    outline: 10px solid #9B0;
+    transition: 0.5s;
+    transform: scale(105%);
+    outline: 5px solid #9B0;
 }
 
 .form-section {
     
     margin: 0 3em 0 3em;
+    border: 2px solid #333;
 
 }
 

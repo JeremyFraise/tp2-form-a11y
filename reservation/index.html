@@ -33,8 +33,7 @@
 
                 <div>
                     <label for="jour-arrivee">Date d'arrivée:</label>
-                    <select id="jour-arrivee" name="jour-arrivee" 
-                    aria-label="Jour d'arrivée" required>
+                    <select id="jour-arrivee" name="jour-arrivee" required>
                         <option value="0">jour</option>
                         <option value="1">1</option>
                         <option value="2">2</option>
@@ -70,26 +69,24 @@
                     </select>
 
                     <label for="mois-arrivee"></label>
-                    <select id="mois-arrivee" name="mois-arrivee" 
-                    aria-label="Mois d'arrivée" required>
+                    <select id="mois-arrivee" name="mois-arrivee" required>
                         <option value="0">mois</option>
-                        <option value="1">1</option>
-                        <option value="2">2</option>
-                        <option value="3">3</option>
-                        <option value="4">4</option>
-                        <option value="5">5</option>
-                        <option value="6">6</option>
-                        <option value="7">7</option>
-                        <option value="8">8</option>
-                        <option value="9">9</option>
-                        <option value="10">10</option>
-                        <option value="11">11</option>
-                        <option value="12">12</option>
+                        <option value="1">janvier</option>
+                        <option value="2">février</option>
+                        <option value="3">mars</option>
+                        <option value="4">avril</option>
+                        <option value="5">mai</option>
+                        <option value="6">juin</option>
+                        <option value="7">juillet</option>
+                        <option value="8">août</option>
+                        <option value="9">septembre</option>
+                        <option value="10">octobre</option>
+                        <option value="11">novembre</option>
+                        <option value="12">décembre</option>
                     </select>
 
                     <label for="annee-arrivee"></label>
-                    <select id="annee-arrivee" name="annee-arrivee" 
-                    aria-label="Année d'arrivée" required>
+                    <select id="annee-arrivee" name="annee-arrivee" required>
                         <option value="0">année</option>
                         <option value="1">2023</option>
                         <option value="2">2024</option>
@@ -99,8 +96,7 @@
 
                 <div>
                     <label for="jour-depart">Date de départ:</label>
-                    <select id="jour-depart" name="jour-depart" 
-                    aria-label="jour de départ" required>
+                    <select id="jour-depart" name="jour-depart" required>
                         <option value="0">jour</option>
                         <option value="1">1</option>
                         <option value="2">2</option>
@@ -134,24 +130,22 @@
                         <option value="30">30</option>
                         <option value="31">31</option>
                     </select>
-                    <select id="mois-depart" name="mois-depart"
-                    aria-label="Mois de départ" required>
+                    <select id="mois-depart" name="mois-depart" required>
                         <option value="0">mois</option>
-                        <option value="1">1</option>
-                        <option value="2">2</option>
-                        <option value="3">3</option>
-                        <option value="4">4</option>
-                        <option value="5">5</option>
-                        <option value="6">6</option>
-                        <option value="7">7</option>
-                        <option value="8">8</option>
-                        <option value="9">9</option>
-                        <option value="10">10</option>
-                        <option value="11">11</option>
-                        <option value="12">12</option>
+                        <option value="1">janvier</option>
+                        <option value="2">février</option>
+                        <option value="3">mars</option>
+                        <option value="4">avril</option>
+                        <option value="5">mai</option>
+                        <option value="6">juin</option>
+                        <option value="7">juillet</option>
+                        <option value="8">août</option>
+                        <option value="9">septembre</option>
+                        <option value="10">octobre</option>
+                        <option value="11">novembre</option>
+                        <option value="12">décembre</option>
                     </select>
-                    <select id="annee-depart" name="annee-depart"
-                    aria-label="Année de départ" required>
+                    <select id="annee-depart" name="annee-depart" required>
                         <option value="0">année</option>
                         <option value="1">2023</option>
                         <option value="2">2024</option>
@@ -192,6 +186,9 @@
                         <option value="6">5</option>
                     </select>
 
+                    <label for adultes>Enfants (maximum 5):</label>
+                    <input type="number" id="adultes" name="personne" min="0" max="5">
+
                 </p>
     
                 <p>
@@ -215,14 +212,14 @@
                 <div class="liste">
                     <!--Code grandement inspiré de celui présent dans le lien suivant : https://stackoverflow.com/questions/17541614/use-images-instead-of-radio-buttons-->
                     <label for="chambreSimple" class="liste__label">
-                        <input type="radio" id="chambreSimple" name="choixChambre" value="small" checked required>
+                        <input type="radio" id="chambreSimple" name="choixChambre" value="small"  required>
                         <figure class="figure">
                             <img class="liste__item--img" src="../images/types-de-chambre/imageOptimisees/1-lit-double_255w.jpg" alt="Option chambre simple">
                         </figure>
                         <p class="liste__item--figcaption">Chambre simple</p>
                     </label>
                 
-                    <label for="chambreDouble" class="liste__label" value="small" checked>
+                    <label for="chambreDouble" class="liste__label" value="small" >
                         <input id="chambreDouble" type="radio" name="choixChambre">
                         <figure class="figure">
                             <img class="liste__item--img" src="../images/types-de-chambre/imageOptimisees/2-lits-double_255w.jpg" alt="Option chambre double">
@@ -230,7 +227,7 @@
                         <p class="liste__item--figcaption">Chambre double</p>
                     </label>
                 
-                    <label for="chambreFamiliale" class="liste__label" value="small" checked>
+                    <label for="chambreFamiliale" class="liste__label" value="small" >
                         <input id="chambreFamiliale" type="radio" name="choixChambre">
                         <figure class="figure">
                             <img class="liste__item--img" src="../images/types-de-chambre/imageOptimisees/3-chambre-familiale_255w.jpg" alt="Option chambre familiale">
@@ -241,7 +238,7 @@
                 </div>
                 
             
-                <input id="dejeuner" type="checkbox" name="dejeuner"></input>
+                <input id="dejeuner" type="checkbox" name="dejeuner">
                 <label for="dejeuner">Inclure le petit déjeuner s'il-vous-plaît</label> 
     
                 <p> Le coût du petit déjeûner des adultes est de 25$ CAN, pour les enfants de moins de 12 ans c'est
@@ -257,19 +254,40 @@
                     <h2>4. Identification</h2>
                 </legend>
                 <div class="div__form-section">
-                    <label for="prenom">Prénom :</label>
-                    <input id="prenom" type="text" name="prenom" autocomplete="given-name" pattern="[A-Za-z]{1-32}" title="Lettre uniquement" required>
+                    <p>
+                        <label for="prenom">Prénom :</label>
+                        <input id="prenom" type="text" name="prenom" autocomplete="given-name" pattern="[a-zA-Z]+" title="Lettre uniquement" required>
+                    </p>
+                    <p class="erreur">
 
-                    <label for="nom">Nom :</label>
-                    <input id="nom" type="text" name="nom" pattern="[A-Za-z]{1-32}]" title="Lettres uniquement" required>
+                    </p>
                 </div>
                 <div class="div__form-section">
-                    <label for="email">Email :</label>
-                    <input id="email" type="email" name="email" required>
+                    <p>
+                        <label for="nom">Nom :</label>
+                        <input id="nom" type="text" name="nom" pattern="[a-zA-Z]+" title="Lettres uniquement" required>
+                    </p>
+                    <p class="erreur">
+
+                    </p>
                 </div>
                 <div class="div__form-section">
-                    <label for="tele">Téléphone :</label>
-                    <input id="telephone" name="telephone" pattern="[\d{3}[\-]\d{3}[\-]\d{4}]" title="" required>
+                    <p>
+                        <label for="email">Email :</label>
+                        <input id="email" type="email" name="email" required>
+                    </p>
+                    <p class="erreur">
+
+                    </p>
+                </div>
+                <div class="div__form-section">
+                    <p>
+                        <label for="tele">Téléphone (111-222-3333):</label>
+                        <input id="telephone" name="telephone" pattern="\d{3}[\-]\d{3}[\-]\d{4}" title="ex: 418-555-8888" required>
+                    </p>
+                    <p class="erreur">
+
+                    </p>
                 </div>
                 
             </fieldset>
@@ -311,7 +329,7 @@
         </ul> -->
         <p>
             Ce site Web est un projet pédagogique réalisé par
-            <a href="">Prénom et Nom</a> et <a href="">Prénom et Nom</a> dans le cadre du cours 582-204-SF Intégration
+            <a href="">Jeremy et Fraser</a> et <a href="">Prénom et Nom</a> dans le cadre du cours 582-204-SF Intégration
             II,
             programme des <a href="">Techniques d'intégration multimédia</a>,
             <a href="">Cégep de Sainte-Foy</a>.
