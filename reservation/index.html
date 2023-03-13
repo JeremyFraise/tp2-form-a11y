@@ -13,12 +13,32 @@
 
 <body>
     <header>
-        <a href="../index.html">
-            <p><img src="../images/logo-jacana.png" alt="Retourner à l'accueil"></p>
-            <p class="titre">Auberge du jacana africain</p>
-        </a>
+        <div class="lienAccueil">
+            <a href="../index.html">
+                <p><img src="../images/logo-jacana.png" alt="Retourner à l'accueil"></p>
+                <p class="titre">Auberge du jacana africain</p>
+            </a>
+        </div>
         <!-- Ajouter un menu : Accueil, Historique, Région, Contact, Réservation -->
-        <p> <a href="../index.html">accueil</a> | <a href="#">historique</a> | <a href="#">région</a> | <a href="#">contact</a> | <a href="index.html">réservation</a>
+        <div class="divMenu">
+            <ul class="menu">
+                <li class="menu__item">
+                    <a class="menu_lien" href="../index.html">accueil</a>
+                </li>
+                <li class="menu__item">
+                    <a class="menu_lien" href="#">historique</a>
+                </li>
+                <li class="menu__item">
+                    <a class="menu_lien" href="#">région</a>
+                </li>
+                <li class="menu__item">
+                    <a class="menu_lien" href="#">contact</a>
+                </li>
+                <li class="menu__item">
+                    <a class="menu_lien" href="index.html">réservation</a>
+                </li>
+            </ul>
+        </div>
     </header>
 
     <main>
@@ -31,10 +51,10 @@
                     <h2>1. Vérifier la disponibilité</h2>
                 </legend>
 
-                <div>
-                    <label for="jour-arrivee">Date d'arrivée:</label>
-                    <select id="jour-arrivee" name="jour-arrivee" required>
-                        <option value="0">jour</option>
+                <div class="date-arrivee">
+                    <label for="date-arrivee">Date d'arrivée:</label>
+                    <select id="date-arrivee" name="jour-arrivee" required>
+                        <option label="jour"></option>
                         <option value="1">1</option>
                         <option value="2">2</option>
                         <option value="3">3</option>
@@ -67,10 +87,8 @@
                         <option value="30">30</option>
                         <option value="31">31</option>
                     </select>
-
-                    <label for="mois-arrivee"></label>
-                    <select id="mois-arrivee" name="mois-arrivee" required>
-                        <option value="0">mois</option>
+                    <select id="date-arrivee" name="mois-arrivee" required>
+                        <option label="mois"></option>
                         <option value="1">janvier</option>
                         <option value="2">février</option>
                         <option value="3">mars</option>
@@ -84,20 +102,18 @@
                         <option value="11">novembre</option>
                         <option value="12">décembre</option>
                     </select>
-
-                    <label for="annee-arrivee"></label>
-                    <select id="annee-arrivee" name="annee-arrivee" required>
-                        <option value="0">année</option>
+                    <select id="date-arrivee" name="annee-arrivee" required>
+                        <option label="année"></option>
                         <option value="1">2023</option>
                         <option value="2">2024</option>
                     </select>
                 
                 </div>
 
-                <div>
-                    <label for="jour-depart">Date de départ:</label>
-                    <select id="jour-depart" name="jour-depart" required>
-                        <option value="0">jour</option>
+                <div class="date-depart">
+                    <label for="date-depart">Date de départ:</label>
+                    <select id="date-depart" name="jour-depart" required>
+                        <option label="jour">jour</option>
                         <option value="1">1</option>
                         <option value="2">2</option>
                         <option value="3">3</option>
@@ -130,8 +146,8 @@
                         <option value="30">30</option>
                         <option value="31">31</option>
                     </select>
-                    <select id="mois-depart" name="mois-depart" required>
-                        <option value="0">mois</option>
+                    <select id="date-depart" name="mois-depart" required>
+                        <option label="mois"></option>
                         <option value="1">janvier</option>
                         <option value="2">février</option>
                         <option value="3">mars</option>
@@ -145,8 +161,8 @@
                         <option value="11">novembre</option>
                         <option value="12">décembre</option>
                     </select>
-                    <select id="annee-depart" name="annee-depart" required>
-                        <option value="0">année</option>
+                    <select id="date-depart" name="annee-depart" required>
+                        <option label="année"></option>
                         <option value="1">2023</option>
                         <option value="2">2024</option>
                     </select>
@@ -164,33 +180,16 @@
                     <h2>2. Nombre de personnes</h2>
                 </legend>
 
-                <p>
-                    
-                    <label for="adultes">Adultes (maximum 4):</label>
-                    <select id="adultes" name="personne" required>
-                        <option value="0"></option>
-                        <option value="1">1</option>
-                        <option value="2">2</option>
-                        <option value="3">3</option>
-                        <option value="4">4</option>
-                    </select>
-
-                    <label for="adultes">Enfants (maximum 5):</label>
-                    <select id="adultes" name="personne" required>
-                        <option value="0"></option>
-                        <option value="1">0</option>
-                        <option value="2">1</option>
-                        <option value="3">2</option>
-                        <option value="4">3</option>
-                        <option value="5">4</option>
-                        <option value="6">5</option>
-                    </select>
-
-                    <label for adultes>Enfants (maximum 5):</label>
-                    <input type="number" id="adultes" name="personne" min="0" max="5">
-
-                </p>
-    
+                <div class="champNombrePersonnes">
+                    <p>
+                        <label for="adultes">Adultes (maximum 4):</label>
+                        <input type="number" id="adultes" name="personne" min="1" max="4" required pattern="[1-4]" aria-label="Nombre d'adultes">
+                    </p>
+                    <p>
+                        <label for="enfants">Enfants (maximum 5):</label>
+                        <input type="number" id="enfants" name="personne" min="0" max="5" required pattern="[0-5]" aria-label="Nombre d'enfants">
+                    </p>
+                </div>
                 <p>
                     Notes: <br>
                     1. la chambre familiale peut loger jusqu'à 6 personnes<br>
@@ -212,7 +211,7 @@
                 <div class="liste">
                     <!--Code grandement inspiré de celui présent dans le lien suivant : https://stackoverflow.com/questions/17541614/use-images-instead-of-radio-buttons-->
                     <label for="chambreSimple" class="liste__label">
-                        <input type="radio" id="chambreSimple" name="choixChambre" value="small"  required>
+                        <input type="radio" id="chambreSimple" class="radioChambres" name="choixChambre" value="small"  required>
                         <figure class="figure">
                             <img class="liste__item--img" src="../images/types-de-chambre/imageOptimisees/1-lit-double_255w.jpg" alt="Option chambre simple">
                         </figure>
@@ -220,7 +219,7 @@
                     </label>
                 
                     <label for="chambreDouble" class="liste__label" value="small" >
-                        <input id="chambreDouble" type="radio" name="choixChambre">
+                        <input id="chambreDouble" class="radioChambres" type="radio" name="choixChambre">
                         <figure class="figure">
                             <img class="liste__item--img" src="../images/types-de-chambre/imageOptimisees/2-lits-double_255w.jpg" alt="Option chambre double">
                         </figure>
@@ -228,7 +227,7 @@
                     </label>
                 
                     <label for="chambreFamiliale" class="liste__label" value="small" >
-                        <input id="chambreFamiliale" type="radio" name="choixChambre">
+                        <input id="chambreFamiliale" class="radioChambres" type="radio" name="choixChambre">
                         <figure class="figure">
                             <img class="liste__item--img" src="../images/types-de-chambre/imageOptimisees/3-chambre-familiale_255w.jpg" alt="Option chambre familiale">
                         </figure>
@@ -254,25 +253,25 @@
                     <h2>4. Identification</h2>
                 </legend>
                 <div class="div__form-section">
-                    <p>
+                    <p class="identification">
                         <label for="prenom">Prénom :</label>
-                        <input id="prenom" type="text" name="prenom" autocomplete="given-name" pattern="[a-zA-Z]+" title="Lettre uniquement" required>
+                        <input id="prenom" type="text" name="prenom" autocomplete="given-name" pattern="[A-Z][a-zà-ÿ]+" title="Lettres seulement. La première lettre doit être en majuscule, alors que le reste doit être en minuscule" required>
                     </p>
                     <p class="erreur">
 
                     </p>
                 </div>
                 <div class="div__form-section">
-                    <p>
+                    <p class="identification">
                         <label for="nom">Nom :</label>
-                        <input id="nom" type="text" name="nom" pattern="[a-zA-Z]+" title="Lettres uniquement" required>
+                        <input id="nom" type="text" name="nom" pattern="[A-Z][a-zà-ÿ]+" title="Lettres seulement. La première lettre doit être en majuscule, alors que le reste doit être en minuscule" required>
                     </p>
                     <p class="erreur">
 
                     </p>
                 </div>
                 <div class="div__form-section">
-                    <p>
+                    <p class="identification">
                         <label for="email">Email :</label>
                         <input id="email" type="email" name="email" required>
                     </p>
@@ -281,7 +280,7 @@
                     </p>
                 </div>
                 <div class="div__form-section">
-                    <p>
+                    <p class="identification">
                         <label for="tele">Téléphone (111-222-3333):</label>
                         <input id="telephone" name="telephone" pattern="\d{3}[\-]\d{3}[\-]\d{4}" title="ex: 418-555-8888" required>
                     </p>

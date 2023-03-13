@@ -32,39 +32,116 @@
 
 header{
 
+    background-color: #333;
     display: flex;
-    justify-content: space-around;
+    padding: 2em;
 
 }
-header p{
-    align-self: flex-end;
+.lienAccueil {
+    
+}
+.titre{
+    text-align:center;
+}
+/* Menu */
+.menu{
+
+    list-style: none;
+    /* height: 50px;  */
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    flex-direction: row;
+    flex-wrap: wrap;
+    text-align: center;
+    background-color: #EEE;
+
+}
+.menu__item{
+
+    font-size: 1.3em;
+
+}
+@media(min-width: 600px) {
+    .menu__item {
+
+        flex: 0 0 calc(100%/3);
+    
+    }
+}
+.menu__lien {
+
+    display: block;
+    width: 100%;
+    text-align: center;
+    /* height: 1.6em; */
+    line-height: 1.7em;
+    background: #3953AD;
+
 }
 
-/* Les trois prochaines lignes ont été grandement inspirées du forum au https://stackoverflow.com/questions/17541614/use-images-instead-of-radio-buttons */
-/* 1 - Cache les boutons radios */
-[type=radio] { 
-    position: absolute;
-    opacity: 0;
-    width: 0;
-    height: 0;
+.menu__lien:link,
+.menu__lien:visited {
+   
+    color: #FADB84;
+    font-weight: 600;
+    text-decoration: none;
+    transition: all .3s ease;
+
+
 }
-  
-/* 2 - Style du curseur au survol */
-[type=radio] + figure img {
-    cursor: pointer;
+
+.menu__lien:hover,
+.menu__lien:active{
+
+  color: #3953AD;
+  background-color: #FADB84;
+
 }
-  
-/* 3 - Style au checked */
-[type=radio]:checked + figure img {
-    transition: 0.5s;
-    transform: scale(105%);
-    outline: 5px solid #9B0;
+
+main {
+
+    margin: 5em
+
 }
 
 .form-section {
     
-    margin: 0 3em 0 3em;
     border: 2px solid #333;
+
+}
+
+.date-arrivee label{
+
+    display: block;
+
+}
+.date-depart label{
+
+    display: block;
+
+}
+.champNombrePersonnes{
+
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    align-items: center;
+
+}
+@media(min-width: 600px){
+
+    .champNombrePersonnes{
+
+        flex-direction: row;
+    
+    }
+}
+.champNombrePersonnes p{
+    margin: .5em;
+    padding: 1em;
+    border: 1px solid #333;
+    background-color: #EEE;
 
 }
 
@@ -73,6 +150,7 @@ header p{
     flex-direction: column;
     flex-wrap: wrap;
     align-items: center;
+    margin: 0 0 1.5em 0;
 }
 @media(min-width: 600px) {
     .liste{
@@ -86,8 +164,52 @@ header p{
 
 }
 
+.liste__label{
+
+    padding: 2px;
+
+}
+/* Les trois prochaines lignes ont été grandement inspirées du forum au https://stackoverflow.com/questions/17541614/use-images-instead-of-radio-buttons */
+/* 1 - Cache les boutons radios */
+.radioChambres { 
+    position: absolute;
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+  
+/* 2 - Style du curseur au survol */
+.radioChambres + figure img {
+    cursor: pointer;
+}
+  
+/* 3 - Style au checked */    
+.radioChambres:hover + figure img{
+    outline: 2px solid #333;
+}
+.radioChambres:checked + figure img {
+    transition: 0.5s;
+    transform: scale(105%);
+    outline: 8px solid #9B0;
+}
+
+
 .liste__item--figcaption {
 
     text-align:center;
+
+}
+
+.liste__label {
+
+    background-color: #EEE;
+
+}
+
+
+.identification label {
+
+    display: block;
+    margin: 0 0 0.5em 0;
 
 }
